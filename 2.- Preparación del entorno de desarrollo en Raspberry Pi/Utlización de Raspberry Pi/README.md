@@ -4,4 +4,4 @@ El objetivo principal es demostrar la integración de componentes electrónicos 
 
 El código presente en este repositorio está diseñado para ejecutarse directamente en la Raspberry Pi, gestionando la lectura de tarjetas RFID, la validación de credenciales y la activación de los LEDs indicativos. Este enfoque provee una base sólida para futuras extensiones, como el registro de datos, la supervisión en tiempo real o la integración con servicios externos. Así, se facilita el desarrollo de soluciones confiables y escalables en el campo del control de acceso.
 
-![Enlace al curso: Control de Acceso Vehicular](https://edu.codigoiot.com/mod/lesson/view.php?id=4453)
+[Enlace al curso: Control de Acceso Vehicular](https://edu.codigoiot.com/mod/lesson/view.php?id=4453)
