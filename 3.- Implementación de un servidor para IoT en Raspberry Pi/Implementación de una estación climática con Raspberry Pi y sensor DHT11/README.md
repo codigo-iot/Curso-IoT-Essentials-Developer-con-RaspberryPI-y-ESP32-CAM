@@ -12,4 +12,4 @@ En este repositorio encontrarás todos los **scripts necesarios** para la adquis
 
 Gracias a su diseño modular, puedes adaptar el código a distintos sensores o mejorar la funcionalidad según tus necesidades. 
 
-[Enlace al curso](https://edu.codigoiot.com/mod/lesson/view.php?id=4600&pageid=4836)
+[Enlace al curso: Implementación de una estación climática con Raspberry Pi y sensor DHT11](https://edu.codigoiot.com/mod/lesson/view.php?id=4600&pageid=4836)
