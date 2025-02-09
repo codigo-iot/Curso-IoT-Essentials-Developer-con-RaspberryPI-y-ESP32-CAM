@@ -1,3 +1,5 @@
+# Envio de mensajes JSON via MQTT con  microcontrolador ESP32-CAM
+
 Este repositorio contiene todos los **códigos necesarios** para ejecutar el taller sobre el uso del **ESP32CAM** para enviar mensajes en formato **JSON** a través de **MQTT**.  
 
 El objetivo del proyecto es demostrar la forma más sencilla de transmitir información desde un **microcontrolador** a un **broker MQTT**, una habilidad clave en aplicaciones de **Internet de las Cosas (IoT)**. Aunque el **ESP32CAM** incluye una cámara, en esta actividad nos enfocamos exclusivamente en su capacidad de **conectividad WiFi**, facilitando la comunicación eficiente con servidores IoT.  
