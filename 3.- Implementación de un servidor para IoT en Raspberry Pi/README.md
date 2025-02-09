@@ -13,4 +13,4 @@ El proyecto está diseñado para desplegar una **estación climática IoT** util
 
 Este repositorio es ideal para estudiantes, desarrolladores y entusiastas de IoT que deseen implementar una solución funcional para el monitoreo climático.  
 
-Enlace al curso:[Implemantación de un servidor para IoT en Raspberry Pi](https://edu.codigoiot.com/course/view.php?id=1049&section=3)
+**Enlace al curso:** [Implemantación de un servidor para IoT en Raspberry Pi](https://edu.codigoiot.com/course/view.php?id=1049&section=3)

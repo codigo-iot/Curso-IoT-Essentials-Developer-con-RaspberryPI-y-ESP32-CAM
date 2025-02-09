@@ -13,4 +13,4 @@ El proyecto está diseñado para procesar, almacenar y visualizar registros clim
 
 Este repositorio proporciona todo lo necesario para desarrollar un sistema eficiente de manejo de datos climáticos en **entornos IoT y científicos**.  
 
-[Enlace al curso: Manejo de registros historicos de datos climáticos con Node-RED](https://edu.codigoiot.com/mod/lesson/view.php?id=4599&pageid=4828)
+**Enlace a la lección:** [Manejo de registros historicos de datos climáticos con Node-RED](https://edu.codigoiot.com/mod/lesson/view.php?id=4599&pageid=4828)
