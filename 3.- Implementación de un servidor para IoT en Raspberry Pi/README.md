@@ -1,3 +1,5 @@
+# Implementación de un servidor para IoT en Raspberry Pi
+
 Este repositorio contiene todos los **códigos necesarios** utilizados en el curso **"Implementación de un servidor para IoT en Raspberry Pi"**, proporcionando una solución integral para la adquisición, almacenamiento y análisis de datos climáticos mediante **tecnologías IoT**.  
 
 El proyecto está diseñado para desplegar una **estación climática IoT** utilizando una **Raspberry Pi** y sensores como el **DHT11**, permitiendo la medición de **temperatura** y **humedad** en tiempo real. Los datos recolectados son enviados a un **servidor MQTT** y procesados en **Node-RED**, donde se almacenan para su análisis histórico y visualización dinámica.  

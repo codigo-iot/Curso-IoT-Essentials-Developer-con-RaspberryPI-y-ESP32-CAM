@@ -1,3 +1,5 @@
+# Manejo de registros historicos de datos climáticos con Node-RED
+
 Este repositorio contiene el **código JSON** necesario para la ejecución del ejercicio de **gestión y análisis de datos climáticos históricos** mediante **Node-RED**.  
 
 El proyecto está diseñado para procesar, almacenar y visualizar registros climáticos de manera eficiente, permitiendo su manipulación mediante **flujos preconfigurados** en Node-RED. Además, se incluyen herramientas para realizar pruebas a través de la **línea de comandos**, facilitando la validación y depuración del flujo de datos sin necesidad de interfaces gráficas adicionales.  

@@ -1,3 +1,5 @@
+# Implementación de una estación climática con Raspberry Pi y sensor DHT11 
+
 Este repositorio contiene todo el código necesario para construir una estación climática utilizando una **Raspberry Pi** y el sensor **DHT11**. Este sistema permite medir la **temperatura** y **humedad** en tiempo real, enviando los datos a un **broker público MQTT** (**broker.hivemq.com**) y visualizándolos en **Node-RED**.  
 
 ### Funcionalidades principales:  
