@@ -1,22 +1,16 @@
 # IoT con microcontrolador ESP32-CAM y protocolo MQTT  
 
-Este repositorio contiene todos los **códigos necesarios** utilizados en el curso **"IoT con Microcontrolador ESP32-CAM y Protocolo MQTT"**, proporcionando una solución completa para la **captura, transmisión y almacenamiento de datos climáticos** mediante **sensores IoT**, **ESP32CAM**, **Raspberry Pi** y **Node-RED**.  
+Este repositorio contiene todos los códigos necesarios utilizados en el curso "IoT con Microcontrolador ESP32-CAM y Protocolo MQTT". A través de este proyecto, aprenderás a recopilar, transmitir y visualizar datos climáticos en tiempo real mediante ESP32CAM, DHT11, MQTT y Node-RED.
 
-A través de diversos ejemplos, aprenderás a recopilar datos de **temperatura y humedad**, enviarlos en **formato JSON** a través de **MQTT** y visualizarlos en un servidor IoT.  
+El sistema permite la medición de temperatura y humedad con el sensor DHT11, enviando la información en formato JSON mediante MQTT a un servidor IoT. Para la visualización y almacenamiento de datos, se utilizan herramientas como Node-RED y Mosquitto MQTT.
 
-## Características del proyecto  
-- **Monitoreo de temperatura y humedad** con sensores como el DHT11. 
-- **Envío de datos JSON mediante MQTT** utilizando ESP32CAM y Raspberry Pi. 
-- **Implementación de un servidor IoT** para la recepción y almacenamiento de datos. 
-- **Visualización en Node-RED** con paneles interactivos. 
-- **Compatibilidad con Mosquitto MQTT** para pruebas locales y remotas. 
-- **Código modular y reutilizable**, basado en ejemplos del curso. 
+## **Características del Proyecto**
 
-## Tecnologías Utilizadas  
-- **ESP32CAM** para transmisión de datos IoT. 
-- **DHT11** para medición de temperatura y humedad. 
-- **MQTT y JSON** para la comunicación eficiente.
-- **Node-RED y Mosquitto** para procesamiento y visualización. 
-- **Raspberry Pi** como servidor de datos IoT. 
+- Monitoreo en tiempo real con sensores IoT.
+- Transmisión de datos en formato JSON mediante MQTT.
+- Configuración de un servidor IoT en Raspberry Pi.
+- Visualización en Node-RED con dashboards interactivos.
+- Compatibilidad con Mosquitto MQTT para pruebas locales/remotas.
+- Código modular y reutilizable basado en el curso. 
 
 **Enlace al curso:** [Iot con microcontrolador ESP32-CAM y protocolo MQTT](https://edu.codigoiot.com/course/view.php?id=1049&section=4)
