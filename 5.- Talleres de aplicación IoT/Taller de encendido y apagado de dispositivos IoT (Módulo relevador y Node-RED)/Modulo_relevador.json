@@ -1,0 +1,182 @@
+[
+    {
+        "id": "962bc7f73392ac96",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d1b26a38c59ce5ac",
+        "type": "ui_switch",
+        "z": "962bc7f73392ac96",
+        "name": "",
+        "label": "Relevador",
+        "tooltip": "",
+        "group": "bc786b8b575fca83",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "cdb3c53f64a3720a",
+                "7e641d2d37231f5c"
+            ]
+        ]
+    },
+    {
+        "id": "cdb3c53f64a3720a",
+        "type": "rpi-gpio out",
+        "z": "962bc7f73392ac96",
+        "name": "",
+        "pin": "19",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "7e641d2d37231f5c",
+        "type": "debug",
+        "z": "962bc7f73392ac96",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3e0d03a243a9cd9a",
+        "type": "mqtt in",
+        "z": "962bc7f73392ac96",
+        "name": "",
+        "topic": "codigoIoT/aplicacion/rele",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9c0ed33ac6aef07c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "70cdc53ad3692fab"
+            ]
+        ]
+    },
+    {
+        "id": "70cdc53ad3692fab",
+        "type": "switch",
+        "z": "962bc7f73392ac96",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "cdb3c53f64a3720a"
+            ],
+            [
+                "cdb3c53f64a3720a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bc786b8b575fca83",
+        "type": "ui_group",
+        "name": "Switch",
+        "tab": "cc47039f5203b640",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9c0ed33ac6aef07c",
+        "type": "mqtt-broker",
+        "name": "mosquitto RPI",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cc47039f5203b640",
+        "type": "ui_tab",
+        "name": "Relevador",
+        "icon": "fa-lightbulb",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]
