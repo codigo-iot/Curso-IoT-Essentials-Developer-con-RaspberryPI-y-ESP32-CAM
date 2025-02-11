@@ -1,6 +1,6 @@
 # Curso IoT Essentials Developer con Raspberry Pi y ESP32-CAM  
 
-Este repositorio contiene todos los **códigos necesarios** para el **Curso IoT Essentials Developer con Raspberry Pi y ESP32-CAM**. A lo largo del curso, se cubren los conceptos clave para el desarrollo de soluciones IoT, desde la configuración del entorno de desarrollo hasta la implementación de proyectos aplicados en **automatización, monitoreo y comunicación de datos en tiempo real**.  
+Este repositorio contiene todos los **códigos necesarios** para el **[Curso IoT Essentials Developer con Raspberry Pi y ESP32-CAM](https://edu.codigoiot.com/course/view.php?id=1049)**. A lo largo del curso, se cubren los conceptos clave para el desarrollo de soluciones IoT, desde la configuración del entorno de desarrollo hasta la implementación de proyectos aplicados en **automatización, monitoreo y comunicación de datos en tiempo real**.  
 
 ## Subcursos  
 
