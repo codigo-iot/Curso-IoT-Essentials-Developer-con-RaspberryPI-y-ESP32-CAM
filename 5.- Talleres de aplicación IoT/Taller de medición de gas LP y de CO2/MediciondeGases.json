@@ -1,0 +1,467 @@
+[
+    {
+        "id": "1902e0eb253fb768",
+        "type": "tab",
+        "label": "Medición de Gases",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "03860ef68a6cb99f",
+        "type": "mqtt in",
+        "z": "1902e0eb253fb768",
+        "name": "",
+        "topic": "detector_gases/datos",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2031c6b4ea3b0f56",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "614a443e2213ebda"
+            ]
+        ]
+    },
+    {
+        "id": "614a443e2213ebda",
+        "type": "json",
+        "z": "1902e0eb253fb768",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 430,
+        "y": 100,
+        "wires": [
+            [
+                "891aaf9f3f3640d2",
+                "da50d981557ca4fb",
+                "77390154d1a418ee"
+            ]
+        ]
+    },
+    {
+        "id": "891aaf9f3f3640d2",
+        "type": "function",
+        "z": "1902e0eb253fb768",
+        "name": "MQ6",
+        "func": "msg.payload = msg.payload.MQ6;\nmsg.topic = \"MQ6\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 100,
+        "wires": [
+            [
+                "0b10fdacfd8922d5",
+                "40762e32580a6bf8"
+            ]
+        ]
+    },
+    {
+        "id": "0b10fdacfd8922d5",
+        "type": "ui_gauge",
+        "z": "1902e0eb253fb768",
+        "name": "",
+        "group": "1bf9c250cbf90730",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "MQ6",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 870,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "da50d981557ca4fb",
+        "type": "function",
+        "z": "1902e0eb253fb768",
+        "name": "MQ135",
+        "func": "msg.payload = msg.payload.MQ135;\nmsg.topic = \"MQ135\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "e4a76ad711c6bbf5",
+                "40762e32580a6bf8"
+            ]
+        ]
+    },
+    {
+        "id": "e4a76ad711c6bbf5",
+        "type": "ui_gauge",
+        "z": "1902e0eb253fb768",
+        "name": "",
+        "group": "c8424e278b1712ef",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "gage",
+        "title": "MQ135",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 900,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "40762e32580a6bf8",
+        "type": "ui_chart",
+        "z": "1902e0eb253fb768",
+        "name": "",
+        "group": "9818e20d2cc70353",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "label": "Histórico",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "PPM",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#f37a16",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 900,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77390154d1a418ee",
+        "type": "function",
+        "z": "1902e0eb253fb768",
+        "name": "Insert",
+        "func": "msg.topic = \"INSERT INTO gases (PpmMQ6, PpmMQ135) VALUES (\"\n    + msg.payload.MQ6 + \", \"\n    + msg.payload.MQ135 + \");\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 300,
+        "wires": [
+            [
+                "deffff4743a3048c"
+            ]
+        ]
+    },
+    {
+        "id": "deffff4743a3048c",
+        "type": "mysql",
+        "z": "1902e0eb253fb768",
+        "mydb": "3dc0083005bc7c4a",
+        "name": "",
+        "x": 590,
+        "y": 300,
+        "wires": [
+            [
+                "9b57f3fc1c825703"
+            ]
+        ]
+    },
+    {
+        "id": "95860758a2a3b7d6",
+        "type": "ui_text",
+        "z": "1902e0eb253fb768",
+        "group": "82cec08a35c1ac77",
+        "order": 1,
+        "width": 9,
+        "height": 6,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 910,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e196f259e9871486",
+        "type": "function",
+        "z": "1902e0eb253fb768",
+        "name": "Select",
+        "func": "msg.topic = \"SELECT * FROM gases ORDER BY id DESC LIMIT 4;\";\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "deffff4743a3048c"
+            ]
+        ]
+    },
+    {
+        "id": "9b57f3fc1c825703",
+        "type": "function",
+        "z": "1902e0eb253fb768",
+        "name": "Text",
+        "func": "let rows = msg.payload;\nlet output = \"\";\n\n// Recorremos cada fila del resultado\nrows.forEach(row => {\n    output += `ID: ${row.id}, PpmMQ6: ${row.PpmMQ6}, PpmMQ135: ${row.PpmMQ135}, Fecha y Hora: ${row.timestamp}<br><br>`;\n});\n\n// Asignamos el texto formateado a msg.payload\nmsg.payload = output;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 300,
+        "wires": [
+            [
+                "95860758a2a3b7d6"
+            ]
+        ]
+    },
+    {
+        "id": "3cfff3fd17e39d14",
+        "type": "ui_button",
+        "z": "1902e0eb253fb768",
+        "name": "",
+        "group": "82cec08a35c1ac77",
+        "order": 2,
+        "width": 2,
+        "height": 6,
+        "passthru": false,
+        "label": "Base de Datos ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "SELECT * FROM clima ORDER BY idd DESC LIMIT 5;",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "e196f259e9871486"
+            ]
+        ]
+    },
+    {
+        "id": "05baf0f99a24f348",
+        "type": "ui_spacer",
+        "z": "1902e0eb253fb768",
+        "name": "spacer",
+        "group": "1a2c38e90847e9de",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6a05b344f6c79205",
+        "type": "ui_spacer",
+        "z": "1902e0eb253fb768",
+        "name": "spacer",
+        "group": "1a2c38e90847e9de",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6f2ade9ca213fbcc",
+        "type": "ui_spacer",
+        "z": "1902e0eb253fb768",
+        "name": "spacer",
+        "group": "1a2c38e90847e9de",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d416b03f96e4ec2a",
+        "type": "ui_spacer",
+        "z": "1902e0eb253fb768",
+        "name": "spacer",
+        "group": "1a2c38e90847e9de",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "825c44760181b6d9",
+        "type": "ui_spacer",
+        "z": "1902e0eb253fb768",
+        "name": "spacer",
+        "group": "1a2c38e90847e9de",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6ec862fa33ea6235",
+        "type": "ui_spacer",
+        "z": "1902e0eb253fb768",
+        "name": "spacer",
+        "group": "1a2c38e90847e9de",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2031c6b4ea3b0f56",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1bf9c250cbf90730",
+        "type": "ui_group",
+        "name": "LP",
+        "tab": "44cfa3f156c98da8",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c8424e278b1712ef",
+        "type": "ui_group",
+        "name": "Co2",
+        "tab": "44cfa3f156c98da8",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9818e20d2cc70353",
+        "type": "ui_group",
+        "name": "Historico",
+        "tab": "44cfa3f156c98da8",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3dc0083005bc7c4a",
+        "type": "MySQLdatabase",
+        "name": "gases",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "EstacionClimatica",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "82cec08a35c1ac77",
+        "type": "ui_group",
+        "name": "Base de Datos",
+        "tab": "44cfa3f156c98da8",
+        "order": 4,
+        "disp": true,
+        "width": 11,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "44cfa3f156c98da8",
+        "type": "ui_tab",
+        "name": "Medición de Gases",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
