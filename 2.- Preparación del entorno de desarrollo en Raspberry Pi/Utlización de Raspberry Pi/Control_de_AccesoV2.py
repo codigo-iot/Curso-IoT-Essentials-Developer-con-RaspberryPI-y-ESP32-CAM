@@ -3,11 +3,11 @@ import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
 
 # Configuración de los LEDs
-ledVerde = 8  # GPIO 8
-ledRojo = 10  # GPIO 10
+ledVerde = 21  # GPIO 21
+ledRojo = 20  # GPIO 20
 
 # Inicializa los pines GPIO
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledVerde, GPIO.OUT)
 GPIO.output(ledVerde, GPIO.LOW)
 GPIO.setup(ledRojo, GPIO.OUT)
