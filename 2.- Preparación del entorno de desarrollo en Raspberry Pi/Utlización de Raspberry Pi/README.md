@@ -1,4 +1,4 @@
-# Control de Acceso Vehicular
+# Control de Acceso
 
 Este repositorio presenta un sistema básico de control de acceso vehicular que emplea un lector RFID y dos indicadores para señalar la autorización o denegación de acceso. Funciona con una Raspberry Pi encargada de procesar la información de las tarjetas RFID y de encender el LED correspondiente (rojo para denegado, verde para autorizado). El proyecto puede servir como punto de partida para desarrollar soluciones de mayor alcance.
 

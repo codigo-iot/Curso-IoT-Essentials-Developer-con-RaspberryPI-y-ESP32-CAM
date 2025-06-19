@@ -11,8 +11,8 @@ try:
 
     # Guarda el ID en un archivo de texto para uso futuro
     with open("ID_almacenado.txt", "w") as file:
-    file.write(str(id))
-    print("ID almacenado correctamente.")
+        file.write(str(id))
+        print("ID almacenado correctamente.")
 finally:
     GPIO.cleanup() # Limpia los pines GPIO al finalizar
   
