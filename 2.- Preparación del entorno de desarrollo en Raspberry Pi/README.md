@@ -6,7 +6,7 @@ Este repositorio contiene todos los **códigos necesarios** para la configuraci�
 
 - Configuración inicial y optimización del sistema operativo en Raspberry Pi.  
 - Instalación de herramientas necesarias para el desarrollo.  
-- Implementación de un sistema de **control de acceso vehicular** con reconocimiento de entrada y salida.  
+- Implementación de un sistema de **control de acceso**.  
 - Integración con **sensores y actuadores** para la gestión del acceso.  
 - Comunicación con una interfaz gráfica para monitoreo en tiempo real.  
 
